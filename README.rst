@@ -42,6 +42,11 @@ Usage
 
 Using the ``klaus`` script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note::
+   This is intended for testing or for low-traffic local installations *only*!
+   The `klaus` script uses wsgiref_ internally which doesn't scale *at all*
+   (in fact it's single-threaded and non-asynchronous).
+
 To run klaus using the default options::
 
    klaus [repo1 [repo2 ...]]
@@ -62,3 +67,6 @@ configuration being read from environment variables. Use it like this (uWSGI exa
          --env KLAUS_SITE_TITLE="Klaus Demo" \
          --env KLAUS_REPOS="/path/to/repo1 /path/to/repo2 ..." \
          ...
+
+
+.. _wsgiref: http://docs.python.org/library/wsgiref.html
