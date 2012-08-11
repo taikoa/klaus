@@ -43,6 +43,7 @@ Usage
 Using the ``klaus`` script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
+
    This is intended for testing or for low-traffic local installations *only*!
    The `klaus` script uses wsgiref_ internally which doesn't scale *at all*
    (in fact it's single-threaded and non-asynchronous).
